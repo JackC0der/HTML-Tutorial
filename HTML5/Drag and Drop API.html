@@ -1,0 +1,39 @@
+<!-- ----Drag and Drop API---- -->
+	
+	
+<!-- OBS: Para tornar um elemento arratave, é só adicionar o argumento dragglabe="true". -->
+<!-- OBS1: Qualquer elemento pode ser arrastavel e qualquer outro pode ser "soltavel". -->
+<html>
+    <head>
+        <title>Drag and Drop API</title>
+    </head>
+    <body>
+    	<script>
+    	    //Cria funçao que vai permitir que arquivos e elementos possam ser "dropados" em outros elementos.
+            //Essa funçao é usada no evento ondragover.
+            function permitirDrop(ev) {
+            	ev.preventDefault();
+            }
+    	    //Cria funçao que define o tipo e o valor do elemento arratado.
+            //No exemplo, o tipo é text e o valor é o id do elemento arrastado.
+            //Essa funçao é usada no evento ondragstart.
+            function drag(ev) {
+            	ev.dataTransfer.setData("text", ev.target.id);
+            }
+            //Cria funçao que vai ser executada quando um arquivo/elemento é dropado.
+            //Essa funçao é usada no evento ondrop.
+            function drop(ev) {
+            	//Evita a manipulaçao padrao do navegado.
+                ev.preventDefault();
+                //O dado arrastado é acessado, essa funçao pode retornar qualquer tipo de dado, que foi definido com setData();.
+                var dado = ev.dataTransfer.getData("text");
+                //Adiciona o elemento arrastado ao elemento de "drop".
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+        <!-- Cria elemento onde se pode "soltar" o elemento arratavel. -->
+        <div id="box" ondrop="drop(event)" ondragover="permitirDrop(event)" style="border: 1px solid black; width: 200px; heigth: 200px;"></div>
+        <!-- Cria o elemento arrastavel. -->
+        <img id="image" src="imagem.jpg" dragglable="true" ondragstart="drag(event)" width="150" heigth="50" alt="">
+    </body>
+</html>

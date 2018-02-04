@@ -1,0 +1,21 @@
+<!-- ----Elemento de Audio---- -->
+
+<!-- A tag audio é usada para implementar audio nas paginas web. -->
+<!-- A tag audio pode receber os atributos loop (repete o audio ate que seja parado), autoplay (inicia o audio automaticamente) e controls (adiciona os botoes de controle do audio). -->
+<html>
+    <head>
+        <title>Audio</title>
+    </head>
+    <body>
+    	<section class="main"><!-- cria um section para o conteudo principal da pagica -->
+    	    <artigle class="post"> <!-- cria um artigle para separar o audio do resto da pagina -->
+    	        <audio src="audio.mp3" controls></audio> <!-- pega o arquivo de audio audio.mp3  (especificado no src) e o coloca em um controle  de audio (como se fosse um player comum)-->
+    	        <audio controls> <!-- pega o arquivo de audio da tag source (a tag source permite que voce importe diferentes tipos de arquivos de audio) -->
+    	            <source src="audio.mpv" type="audio/mpv">
+                </audio>
+    	    </artigle>
+    	</section>
+    </body>
+</html>
+<!-- OBS: O que estiver entre as tags <audio> e </audio> é o que vai mostrar caso o elmento audio nao for suportado pelo navegador. -->
+<!-- OBS2: Todos os atributos podem ou nao ser adicionados a tag. -->

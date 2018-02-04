@@ -1,0 +1,30 @@
+<!-- Um Formulario Qualquer. -->
+
+<html>
+    <head>
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form>
+            <label>Seu Nome:</label>
+            <input type="text" placeholder="Seu nome..." id="nome" required>
+
+            <br><br>
+
+            <label>Seu Email:</label>
+            <input type="email" placeholder="exemplo@exemplo.com" id="email">
+
+            <br><br>
+
+            <label>Sua Cidade:</label>
+            <input type="text" placeholder="Sua cidade..." id="cidade" list="cidades" required>
+
+            <datalist id="cidades">
+                <option value="SP">
+                <option value="SJC">
+            </datalist>
+
+
+        </form>
+    </body>
+</html>

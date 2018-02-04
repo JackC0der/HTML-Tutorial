@@ -1,0 +1,26 @@
+<!-- ----Formularios---- -->
+
+<html>
+	<head>
+	    <title>Formularios</title>
+	</head>
+	<body>
+		<form action="www.form.com" method="POST"> <!-- tag form inicia o formulario. O atributo action especifica para onde sera enviado o formulario (Como um script php que depois envia para um email. O atributo method especifica o metodo HTTP do envio do formulario. -->
+			<input type="text" name="usuario"> <!-- o atributo name especifica um nome para o form. -->
+			<br>
+			<br>
+			<input type="password" name="senha"> <!-- o atributo type especifica o tipo De entrada, para saber como trabalhar. -->
+			<br>
+			<hr>
+			<input type="radio" name="sexo" value="Masculino"> <!-- value define o valor do input (radio no caso). -->  Masculino
+			<input type="radio" name="sexo" value="Feminino">Feminino
+			<br>
+			<hr>
+			<input type="checkbox" name="genero" value="1">Masculino
+			<input type="checkbox" name="genero" value="2">Feminino
+			<br>
+			<br>
+			<input type="submit" value="enviar"> <!-- envia o formulario -->
+	    </form>
+	</body>
+</html>

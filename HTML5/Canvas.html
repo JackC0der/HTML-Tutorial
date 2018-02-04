@@ -1,0 +1,42 @@
+<!-- ----Canvas---- -->
+
+<html>
+    <head>
+        <title>Canvas</title>
+    </head>
+    <body>
+        <!-- Cria um conteiner para o canvas. -->
+        <canvas id="canvas01" width="400" heigth="200">
+        </canvas>
+        <!-- Por ter o atributo id, canvas pode ser referenciado por JavaScript. -->
+        <script>
+            // Cria um objeto que vai "representar" o canvas.
+            var canvas = document.getElementById("canvas01");
+            // Retorna um contexto de desenho ao canvas.
+            var contexto = canvas.getContext("2d");
+            // Define a cor que ira preencher as formas.
+            contexto.fillStyle = "rgba(0, 200, 0, 1)";
+            // Desenha um quadrado "preenchido", onde os atributos são: fillRect(Coodernada X, Coodernada Y, Width (largura), Heigth (altura)).
+            contexto.fillRect(20, 20, 100, 100);
+            // ----Outros Metodos do Canvas----
+            // Define onde uma linha ira começar, com as propriedades, moveTo(Coodernada X, Coodernada Y).
+            contexto.moveTo(30, 30);
+            // Define onde a linha ira acabar (mesmas propriedades do item acima).
+            contexto.lineTo(40, 40);
+            // Inicia o desenho de um circulo.
+            contexto.beginPath();
+            // Define os parametros do circulo, sendo eles, arc(Coodernada X, Coodernada Y, Radial/Arredondamento, Inicio, Fim).
+            contexto.arc(50, 50, 60, 70, 80);
+            // Termina o desenho.
+            contexto.stroke();
+            // Desenha um gradiente linear, onde, createLinearGradient(Coodernada X, Coodernada Y, Coodernada X, Coodernada Y).
+            contexto.createLinearGradient(90, 90, 100, 100);
+            // Desenha um gradiente radial/circular, onde, createRadialGradient(Coodernada X, Coodernada Y, Radial, Coodernada X, Coodernada Y, Radial).
+            contexto.createRadialGradient(110, 110, 20, 120, 120, 30);
+            //Desenha um texto "preenchido", onde, fillText(texto, Coodernada X, Coodermada Y).
+            contexto.fillText("EAE BOY",130, 140);
+            // Desenha um texto sem preenchimento, onde, strokeText(texto, Coodernada X, Coodernada Y).
+            contexto.strokeText("EAE BOY", 150, 160);
+        </script>
+    </body>
+</html>

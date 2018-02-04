@@ -1,0 +1,25 @@
+<!-- ----Article-Section-Aside---- -->
+
+<!-- Article (artigo) se separa da pagina, idenpendente do conteudo (é o substitudo da div do html4), pode ser usado como um post de um blog, um artigo de jornal, um wiget interativo, etc. -->
+<!-- Section (usado no font principal e no artigle) é a seçao (container) principal do artigle ou da pagina, onde fica a informaçao principal de uma pagina, ou seja, o que o usuario tem que visualizar com maior prioridade (o que o usuario busca).
+Tbm podemos usar sections para dividir informaçoes, por exemplo, uma pagina de uma empresa pode ter um section para informaçoes, outra para contato e mais uma para serviços. -->
+<!-- Aside é um conteudo secundario, que pode ser considerado separado do conteudo principal, mas tambem relacionado (indiretamente)  com o conteudo principal.
+Como por exemplo: um entrgador de comida... pode tem uma section falando que faz entregas de comida, e um aside falando que entrega em menos de 24 horas.
+OBS: Quando um aside é usado fora de um artigle, o conteudo do aside passa a ser relacionado ao conteudo em volta dele.
+OBS: O aside geralmente é usado em barras laterais. -->
+<html>
+    <head>
+        <title>Article-Section-Aside</title>
+    </head>
+    <body>
+        <section> <!-- cria um section onde coloquei o conteudo principal da pagina (o meio dela) -->
+    	    <article> <!-- cria um artigle (elemento separado da pagina) -->
+    	        <h1>Titulo do article</h1> <!-- elemento dentro do artigle -->
+                <p>Um paragrafo do articlre</p>
+                <aside><p>Este é um paragrafo do aside</p></aside> <!-- cria um aside indiretamente relacionado ao artigle -->
+            </article>
+        </section>
+    </body>
+</html>
+
+<!-- OBS: Quando um artigle é aninhado no interior de outro artigle, ele pode ser relacionado a outro elemento. Por exemplo um comentario de um post, pode ser um artigle aninhado dentro de um outro artigle representando o post. -->

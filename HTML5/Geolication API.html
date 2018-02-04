@@ -1,0 +1,31 @@
+<!-- ----Geolocation API---- -->
+
+<html>
+    <head>
+        <title>Geolocation API</title>
+    </head>
+    <body>
+    	<section>
+    	    <script>
+    	        // Cria uma funçao que vai retornar a localizaçao do usuario
+                function posicao(posicao) {
+                    // Cria um objeto das coodenadas
+                    var posicao = posicao.coords;
+                    // Mostra as coodernadas ao usuarios usando alerts
+                    alert("Latitude: " + posicao.latitude);
+                    alert("Longitude: " + posicao.longitude);
+                    alert("Metros aproximados: " + posicao.acurracy);
+                }
+                // Cria funçao que vai retornar um possivel erro
+                function casoDeErro(erro) {
+                	// Mostra as informaçao do erro ocorrido
+                    alert("Erro (" + erro.code + "): " + erro.message);
+                }
+                // Cria um dicio para passar funçoes extras
+                var op = {enableHighAccuracy : true};
+                // Chama a funçao com os parametros que configuramos
+                navigator.geolocation.getCurrentPosition(posicao, casoDeErro, op);
+    	    </script>
+    	</section>
+    </body>
+</html>

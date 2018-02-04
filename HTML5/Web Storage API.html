@@ -1,0 +1,23 @@
+<!-- ----Web Storage Api---- -->
+
+<!-- A WSA (Web Storage API) pode armazenar dados no computador local do usuario -->
+<html>
+    <head>
+        <title>WSA</title>
+    </head>
+    <body>
+    	<script>
+    	    // Armazena o dado Jack na chave nome, com o metodo localStorage() (O dado fica salvo sem data determinada, para expirar)
+            localStorage.setItem("Nome",  "Jack");
+            // Armazena o dado 14 na chave idade, com o metodo sessionStorage() (O dado fica salvo até que o usiario feche o navegador)
+            sessionStorage.setItem("Idade", "14");
+            // Acessa o valor contido em Nome e printa ele usado o alert
+            alert(localStorage.getItem("Nome"));
+            // Remove um dado que esta contido na sessionStorage, com a chave Idade
+            sessionStorage.removeItem("Idade");
+            // Remove todos os dados contidos no localStorage
+            localStorage.clear();
+        </script>
+    </body>
+</html>
+<!-- OBS: Os mesmos metodos podem ser usados nos dois tipos de armazenamento -->

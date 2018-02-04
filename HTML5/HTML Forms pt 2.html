@@ -1,0 +1,61 @@
+<!-- ----HTML Forms 2/2---- -->
+
+<!--
+
+Tipos de input (adicionados no html5):
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+Atributos do input (adicionados dno html5):
+
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+
+-->
+
+<html>
+    <head>
+        <title>HTML Forms 2/2</title>
+    </head>
+    <body>
+        <form>
+            <!-- Exemplos de tipos de input: -->
+            <!-- Search pode ser usado para criar caixas de pesquisas -->
+            <input type="search" placeholder="Search..." id="searchBox" name="searchItem">
+            <!-- Tag datalist, pode ser usada para criar um campo de pesquisa com opicoes pre definidas. -->
+            <input type="text" id="carro" list="cores">
+            <!-- Cria uma lista "de dados", contendo algumas cores. -->
+            <datalist id="cores">
+                <!-- Define uma das opicoes da lista (onde, no atributo value, entra o valor dessa opicao), no caso uma das cores. -->
+                <option value="Vermelho">
+                <option value="Verde">
+                <option value="Amarelo">
+            </datalist>
+        </form>
+    </body>
+</html>
+

@@ -1,0 +1,49 @@
+<!-- ----Canvas Transformation---- -->
+
+<html>
+    <head>
+        <title>Canvas Transformation</title>
+    </head>
+    <body>
+        <canvas id="canvas01" width="1000" height="4000"></canvas>
+        <script>
+            var canvas = document.getElementById("canvas01");
+            var contexto = canvas.getContext("2d");
+            // ----Translate----
+            // Define uma fonte para os textos do objeto contexto.
+            contexto.font = "bold 22px Tahoma";
+            // Define onde os textos do objeto contexto vao ser alinhados.
+            contexto.textAlign = "start";
+            // Escreve o texto na tela.
+            contexto.fillText("Um texto comum.", 10, 20);
+            // O translate eh usado para mover o canvas (sim, isso que voce esta pensando, como se alterassemos os atributos width e height da tag canvas), onde, translate(Coodernada X, Coodernada Y). Muito usado quando se tem um desenho complexo e precisa move-lo.
+            contexto.translate(30, 40);
+            // Redesenha o texto novamente, com as novas coodernadas definidas no translate.
+            contexto.fillText("Um texto comum depois do translate.", 10, 20);
+            // ----Rotate----
+            // Define uma cor para os "preenchimentos" do objeto contexto.
+            contexto.fillStyle = "#FF0000";
+            // Desenha um quadrado.
+            contexto.fillRect(10, 10, 100, 100);
+            // O  rotate eh usado para rotacionar o canvas (Sim!, como se voce estivesse rotacionando um quandro na parede, no caso o quadro eh o canvas e a pintura no quadro, sao seus desenhos, no canvas), onde, rotate(Quantidade).
+            contexto.rotate((Math.PI / 180) * 25);
+            // Define uma nova cor para os "preenchimento" do objeto contexto.
+            contexto.fillStyle = "#0000FF";
+            // Desennha um quandrado.
+            contexto.fillRect(10, 10, 100, 100);
+            // ----Scale----
+            // Define uma nova cor para os "preenchimentos" do objeto canvas.
+            contexto.fillStyle = "#0B9200";
+            // Desenha uma linha
+            contexto.moveTo(50, 60);
+            contexto.lineTo(70,80);
+            contexto.stroke();
+            // Muda a escala do canvas, onde, scale(Quantidade de vezes de que vai mudar a coodernada X, Quantidade de vezes que vai mudar a coodernada Y).
+            contexto.scale(1, 2);
+            // Dessenha uma linha
+            contexto.moveTo(50, 60);
+            contexto.lineTo(70,80);
+            contexto.stroke();
+        </script>
+    </body>
+</html>

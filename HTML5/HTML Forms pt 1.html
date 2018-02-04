@@ -1,0 +1,20 @@
+<!--  ----HTML Forms---- -->
+
+<html>
+    <head>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+    <!-- Tag form define, que vamos criar um formulario (campo de entrado do usuario). -->
+    <form>
+        <!-- Tag label, "rotula" o input, a baixo. -->
+        <label>Seu Nome:</label>
+        <!-- Tag input, define que um campo para que tenhamos uma entrada do usuario, onde o atributo type, vai definir o tipo de entrada, nesse caso, um texto. -->
+        <input id="usuario" name="NomeDeUsuario" type="text">
+        <!-- O atributo placeholder, coloca um texto dentro do input, que se apaga quando o usuario vai realmente dar a entrada, como por exemplo um modelo de um endereco de email. TAmbem temos o atributo autofocus, que faz com que o navegador ja "selecione" o input, assim que o formulario carregar. Tambem temos o atributo required, que nao deixa o formulario ser enviado, sem que tal input esteja preenchido. -->
+        <br>
+        <label>Seu email:</label>
+        <input type="text" name="email" placeholder="exemplo@exemplo.com" required autofocus>
+    </form>
+    </body>
+</html>
